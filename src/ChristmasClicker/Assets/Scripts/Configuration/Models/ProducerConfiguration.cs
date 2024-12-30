@@ -17,5 +17,6 @@ namespace Configuration.Models
         public float PriceMultiplier;
         public float BaseProductionTime;
         public int SortOrder;
+        public bool UnlockedByDefault;
     }
 }

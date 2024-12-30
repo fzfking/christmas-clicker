@@ -1,7 +1,7 @@
-﻿using Configuration.Models;
+﻿using Common.Services;
+using Configuration.Models;
 using ContentManagement.Services;
 using Cysharp.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace Configuration.Services
 {
@@ -25,7 +25,7 @@ namespace Configuration.Services
         public async UniTask LoadAsync()
         {
             var serializedConfiguration = await _contentProvider.LoadTextAsync(ConfigurationAddress);
-            GameConfiguration = JsonConvert.DeserializeObject<GameConfiguration>(serializedConfiguration);
+            GameConfiguration = SerializerStaticService.Deserialize<GameConfiguration>(serializedConfiguration);
         }
     }
 }

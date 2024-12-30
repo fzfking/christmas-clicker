@@ -1,8 +1,8 @@
 ﻿#if UNITY_EDITOR
 using System.IO;
+using Common.Services;
 using Configuration.Models;
 using Cysharp.Threading.Tasks;
-using Newtonsoft.Json;
 using TriInspector;
 using UnityEngine;
 
@@ -19,7 +19,7 @@ namespace Configuration.EditorTools
         {
             if (File.Exists(Path))
             {
-                gameConfiguration = JsonConvert.DeserializeObject<GameConfiguration>(await File.ReadAllTextAsync(Path));
+                gameConfiguration = SerializerStaticService.Deserialize<GameConfiguration>(await File.ReadAllTextAsync(Path));
                 Debug.Log($"Fetched configuration from {Path}");
             }
             else
@@ -33,7 +33,7 @@ namespace Configuration.EditorTools
         [Button]
         public async UniTask SaveAsync()
         {
-            await File.WriteAllTextAsync(Path, JsonConvert.SerializeObject(gameConfiguration, Formatting.Indented));
+            await File.WriteAllTextAsync(Path, SerializerStaticService.Serialize(gameConfiguration));
             Debug.Log($"Saved {Path}");
         }
     }
