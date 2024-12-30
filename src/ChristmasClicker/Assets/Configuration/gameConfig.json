@@ -1,0 +1,96 @@
+{
+  "Resources": [
+    {
+      "Id": "snowflake",
+      "SortOrder": 0
+    },
+    {
+      "Id": "chocolate",
+      "SortOrder": 1
+    }
+  ],
+  "Producers": [
+    {
+      "Id": "snowman-factory",
+      "ProducedResourceId": "snowflake",
+      "PriceResourceId": "snowflake",
+      "Modifiers": [
+        {
+          "FromLevel": 5,
+          "ProductionMultiplier": 0.0,
+          "ProductionTimeOffset": -0.5
+        },
+        {
+          "FromLevel": 10,
+          "ProductionMultiplier": 2.0,
+          "ProductionTimeOffset": 0.0
+        },
+        {
+          "FromLevel": 20,
+          "ProductionMultiplier": 3.0,
+          "ProductionTimeOffset": 0.0
+        },
+        {
+          "FromLevel": 25,
+          "ProductionMultiplier": 0.0,
+          "ProductionTimeOffset": -1.5
+        },
+        {
+          "FromLevel": 40,
+          "ProductionMultiplier": 0.0,
+          "ProductionTimeOffset": -2.0
+        }
+      ],
+      "BasePrice": 10,
+      "BaseProduction": 3,
+      "PriceMultiplier": 1.15,
+      "BaseProductionTime": 5.0,
+      "SortOrder": 0
+    },
+    {
+      "Id": "magic-snow-to-choco-factory",
+      "ProducedResourceId": "chocolate",
+      "PriceResourceId": "snowflake",
+      "Modifiers": [
+        {
+          "FromLevel": 10,
+          "ProductionMultiplier": 0.0,
+          "ProductionTimeOffset": -2.0
+        },
+        {
+          "FromLevel": 20,
+          "ProductionMultiplier": 0.0,
+          "ProductionTimeOffset": -2.0
+        },
+        {
+          "FromLevel": 30,
+          "ProductionMultiplier": 12.0,
+          "ProductionTimeOffset": 0.0
+        },
+        {
+          "FromLevel": 40,
+          "ProductionMultiplier": 4.0,
+          "ProductionTimeOffset": 0.0
+        },
+        {
+          "FromLevel": 50,
+          "ProductionMultiplier": 0.0,
+          "ProductionTimeOffset": -5.0
+        }
+      ],
+      "BasePrice": 250,
+      "BaseProduction": 1,
+      "PriceMultiplier": 1.35,
+      "BaseProductionTime": 12.0,
+      "SortOrder": 1
+    }
+  ],
+  "Managers": [
+    {
+      "Id": "snowman-leader",
+      "AutomationProducerId": "snowman-factory",
+      "PriceResourceId": "snowflake",
+      "Price": 10000
+    }
+  ]
+}

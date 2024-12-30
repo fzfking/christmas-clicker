@@ -9,6 +9,7 @@ namespace Configuration.Models
     {
         public string Id;
         public string AutomationProducerId;
+        public string PriceResourceId;
         public long Price;
     }
 }
