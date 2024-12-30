@@ -27,7 +27,12 @@ namespace Progress
 
         public async UniTask FetchAsync(GameConfiguration configuration)
         {
-            Progress = await _persistentStorage.LoadAsync(ProgressKey, new PlayerProgress());
+            Progress = await _persistentStorage.LoadAsync(ProgressKey, new PlayerProgress()
+            {
+                Managers = new(),
+                Producers = new(),
+                Resources = new()
+            });
             var hasChanges = FillMissingProgressItems(Progress, configuration);
             if (hasChanges) 
                 await _persistentStorage.SaveAsync(ProgressKey, Progress);

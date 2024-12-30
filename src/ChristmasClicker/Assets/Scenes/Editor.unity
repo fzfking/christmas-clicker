@@ -180,6 +180,7 @@ MonoBehaviour:
       PriceMultiplier: 1.15
       BaseProductionTime: 5
       SortOrder: 0
+      UnlockedByDefault: 1
     - Id: magic-snow-to-choco-factory
       ProducedResourceId: chocolate
       PriceResourceId: snowflake
@@ -204,6 +205,7 @@ MonoBehaviour:
       PriceMultiplier: 1.35
       BaseProductionTime: 12
       SortOrder: 1
+      UnlockedByDefault: 0
     Managers:
     - Id: snowman-leader
       AutomationProducerId: snowman-factory

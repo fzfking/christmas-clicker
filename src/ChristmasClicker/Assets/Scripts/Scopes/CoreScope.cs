@@ -1,7 +1,6 @@
 ﻿using Common.Services;
 using Configuration.Services;
 using ContentManagement.Services;
-using Core;
 using Progress;
 using VContainer;
 using VContainer.Unity;
