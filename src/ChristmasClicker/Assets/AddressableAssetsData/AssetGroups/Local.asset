@@ -15,8 +15,33 @@ MonoBehaviour:
   m_GroupName: Local
   m_GUID: c8e64760e4377634bbd37d839cb702b7
   m_SerializeEntries:
+  - m_GUID: 3bcc0d10ac946104d9c2c0e02109ab5a
+    m_Address: snowflake-icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95648d5b08dddd248a7989429cea7d64
+    m_Address: snowman-factory-icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c926766879cd09e4f93b5fceecfe1d2a
+    m_Address: chocolate-icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd77ddcf9b9102648ba51dbb7d40ff77
+    m_Address: magic-snow-to-choco-factory-icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e019aa5169e0eff4b8a5ed8f178e3d52
     m_Address: gameConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edf2430d09d70a740b960b21c3a70205
+    m_Address: snowman-leader-icon
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
